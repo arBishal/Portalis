@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import Navbar from "@/components/navbar";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,17 +16,20 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Ashikur B.'s Portal",
   description:
-    "Get to know Ashikur Rahman Bishal, a multidisciplinary creator who combines code, design, and storytelling. Explore a picked out selection of projects that exhibit enthusiasm, precision, and creativity."
+    "Get to know Ashikur Rahman Bishal, a multidisciplinary creator who combines code, design, and storytelling. Explore a picked out selection of projects that exhibit enthusiasm, precision, and creativity.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased relative`}
       >
-        {children}
+        <Navbar />
+        <main className="flex items-center justify-center min-h-screen font-mono">
+          {children}
+        </main>
       </body>
     </html>
   );
