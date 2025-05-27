@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="max-w-5xl p-6 gap-4 flex flex-col items-center justify-center text-5xl font-extrabold">
@@ -104,6 +102,7 @@ export default function Home() {
         aliquet varius lectus eu aliquam. Fusce ac magna at turpis laoreet
         maximus non eu orci.
       </p>
+      
     </div>
   );
 }
