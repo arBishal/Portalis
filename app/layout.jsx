@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         className={`antialiased relative`}
       >
         <Navbar />
-        <main className="flex items-center justify-center min-h-screen font-mono">
+        <main className="flex flex-col items-center justify-center min-h-screen font-mono">
           {children}
         </main>
       </body>
