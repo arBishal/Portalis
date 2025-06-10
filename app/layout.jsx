@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Ashikur B.'s Portal",
+  title: "Po's Folio",
   description:
-    "Get to know Ashikur Rahman Bishal, a multidisciplinary creator who combines code, design, and storytelling. Explore a picked out selection of projects that exhibit enthusiasm, precision, and creativity.",
+    "Po, the Legendary Dragon Warrior, Master of Chi, Doomsday of Dumplings.",
 };
 
 export default function RootLayout({ children }) {
