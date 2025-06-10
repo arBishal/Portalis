@@ -12,6 +12,7 @@ import {
 
 import { useScrollNavbar } from "@/hooks/useScrollNavbar";
 import FlipMotionEffect from "@/components/flip-motion-effect";
+import { NAV_LINKS } from "@/constants/nav-links.js";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -31,7 +32,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed font-mono flex items-center justify-between px-6 py-4 border border-border-transparent backdrop-blur-sm rounded-full w-full max-w-5xl top-4 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out
+      className={`fixed font-mono flex items-center justify-center sm:justify-between gap-24 px-6 py-4 border border-border-transparent backdrop-blur-sm rounded-full w-min max-w-5xl top-4 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out
         ${
           mounted && visible
             ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -44,31 +45,28 @@ export default function Navbar() {
         links={[
           { href: "/", label: "Po.rtalis" }
         ]}
+        className="hidden sm:block"
       />
 
       {/* links */}
       <div className="flex gap-4 sm:gap-8 text-sm sm:text-lg items-center justify-center">
+        {NAV_LINKS.map(({ href, label, icon: Icon }, index) => (
         <Link
-          href="/#pricing"
-          className="group transition-all duration-150 flex gap-2 items-center justify-center"
+          key={index}
+          href={href}
+          aria-label={label}
+          title={label}
         >
-          <CurrencyBangladeshiIcon className="w-6 h-6 transition-transform duration-500 group-hover:rotate-360 group-active:-rotate-90" />
-          <span className="hidden sm:inline-block">Pricing</span>
+          <Icon className="w-6 h-6 transition-transform duration-300 hover:-rotate-360 active:-rotate-15" />
         </Link>
-
-        <Link
-          href="/#about"
-          className="group transition-all duration-150 flex gap-2 items-center justify-center"
-        >
-          <InformationCircleIcon className="w-6 h-6 transition-transform duration-500 group-hover:rotate-360 group-active:-rotate-90" />
-          <span className="hidden sm:inline-block">About Us</span>
-        </Link>
+      ))}
 
         {/* theme toggle */}
         <button
           onClick={toggleTheme}
           className="transition-transform duration-500 hover:-rotate-360 active:-rotate-90"
           aria-label="Toggle Theme"
+          title="Toggle Theme"
         >
           {isDark ? (
             <SunIcon className="w-6 h-6" />
