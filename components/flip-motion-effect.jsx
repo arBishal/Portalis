@@ -32,7 +32,7 @@ const FlipLink = ({ children, href }) => {
         style={{ lineHeight: 0.75 }}
       >
         <div>
-          {children.split("").map((l, i) => (
+          {[...children].map((l, i) => (
             <motion.span
               key={i}
               variants={{
@@ -51,7 +51,7 @@ const FlipLink = ({ children, href }) => {
           ))}
         </div>
         <div className="absolute inset-0">
-          {children.split("").map((l, i) => (
+          {[...children].map((l, i) => (
             <motion.span
               key={i}
               variants={{
