@@ -1,4 +1,4 @@
-import TypewriterEffect from "@/components/typewriter-effect";
+import TypewriterEffect from "@/components/effects/typewriter-effect";
 
 export default function Hero() {
   return (

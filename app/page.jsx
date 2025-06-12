@@ -1,9 +1,8 @@
-import Hero from "@/components/landing-page/hero";
+import Hero from "@/components/sections/hero";
 
 export default function Home() {
   return (
     <>
-      <Hero/>
       <Hero/>
     </>
   );

@@ -6,12 +6,10 @@ import { usePathname } from "next/navigation";
 import {
   SunIcon,
   MoonIcon,
-  CurrencyBangladeshiIcon,
-  InformationCircleIcon,
 } from "@heroicons/react/24/outline";
 
 import { useScrollNavbar } from "@/hooks/useScrollNavbar";
-import FlipMotionEffect from "@/components/flip-motion-effect";
+import FlipMotionEffect from "@/components/effects/flip-motion-effect";
 import { NAV_LINKS } from "@/constants/nav-links.js";
 
 export default function Navbar() {
