@@ -47,7 +47,7 @@ export default function Navbar() {
       />
 
       {/* links */}
-      <div className="flex gap-4 sm:gap-8 text-sm sm:text-lg items-center justify-center">
+      <div className="flex gap-4 sm:gap-6 text-sm sm:text-lg items-center justify-center">
         {NAV_LINKS.map(({ href, label, icon: Icon }, index) => (
         <Link
           key={index}
@@ -55,7 +55,7 @@ export default function Navbar() {
           aria-label={label}
           title={label}
         >
-          <Icon className="w-6 h-6 transition-transform duration-300 hover:-rotate-360 active:-rotate-15" />
+          <Icon className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 hover:-rotate-360 active:-rotate-30" />
         </Link>
       ))}
 
@@ -67,9 +67,9 @@ export default function Navbar() {
           title="Toggle Theme"
         >
           {isDark ? (
-            <SunIcon className="w-6 h-6" />
+            <SunIcon className="w-5 h-5 sm:w-6 sm:h-6" />
           ) : (
-            <MoonIcon className="w-6 h-6" />
+            <MoonIcon className="w-5 h-5 sm:w-6 sm:h-6" />
           )}
         </button>
       </div>
