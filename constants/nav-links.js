@@ -1,6 +1,6 @@
 import {
   BriefcaseIcon,
-  LightBulbIcon,
+  CodeBracketIcon,
   RectangleGroupIcon,
   AcademicCapIcon,
   TrophyIcon,
@@ -17,7 +17,7 @@ export const NAV_LINKS = [
   {
     href: "/#competences",
     label: "Competences",
-    icon: LightBulbIcon,
+    icon: CodeBracketIcon,
   },
   {
     href: "/#projects",

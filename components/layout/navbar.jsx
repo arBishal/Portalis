@@ -55,21 +55,21 @@ export default function Navbar() {
           aria-label={label}
           title={label}
         >
-          <Icon className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 hover:-rotate-360 active:-rotate-30" />
+          <Icon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-teal-500 transition-all duration-300 active:-rotate-45" />
         </Link>
       ))}
 
         {/* theme toggle */}
         <button
           onClick={toggleTheme}
-          className="transition-transform duration-500 hover:-rotate-360 active:-rotate-90"
+          className="transition-all duration-500 active:-rotate-90 cursor-pointer"
           aria-label="Toggle Theme"
           title="Toggle Theme"
         >
           {isDark ? (
-            <SunIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+            <SunIcon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-teal-500" />
           ) : (
-            <MoonIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+            <MoonIcon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-teal-500" />
           )}
         </button>
       </div>
