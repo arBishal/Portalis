@@ -39,12 +39,7 @@ export default function Navbar() {
       `}
     >
       {/* logo */}
-      <FlipMotionEffect
-        links={[
-          { href: "/", label: "Po.rtalis" }
-        ]}
-        className="hidden sm:block"
-      />
+      <Link href="/#hero" className="font-black hidden sm:block">PO.RTALIS</Link>
 
       {/* links */}
       <div className="flex gap-4 sm:gap-6 text-sm sm:text-lg items-center justify-center">
@@ -55,14 +50,14 @@ export default function Navbar() {
           aria-label={label}
           title={label}
         >
-          <Icon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-teal-500 transition-all duration-300 active:-rotate-45" />
+          <Icon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-teal-500 transition-transform hover:tansition-color duration-300 active:-rotate-45" />
         </Link>
       ))}
 
         {/* theme toggle */}
         <button
           onClick={toggleTheme}
-          className="transition-all duration-500 active:-rotate-90 cursor-pointer"
+          className="transition-transform hover:tansition-color duration-500 active:-rotate-90 cursor-pointer"
           aria-label="Toggle Theme"
           title="Toggle Theme"
         >
