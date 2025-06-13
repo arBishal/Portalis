@@ -26,17 +26,11 @@ export default function Navbar() {
     setIsDark(!isDark);
   };
 
-  const { visible, mounted } = useScrollNavbar(10);
+  // const { visible, mounted } = useScrollNavbar(10);
 
   return (
     <nav
-      className={`fixed font-mono flex items-center justify-center sm:justify-between gap-24 px-6 py-4 border border-border-transparent backdrop-blur-sm rounded-full w-min max-w-5xl top-4 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out
-        ${
-          mounted && visible
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-4 pointer-events-none"
-        }
-      `}
+      className={`fixed font-mono flex items-center justify-center sm:justify-between gap-24 px-6 py-4 border border-border-transparent backdrop-blur-sm rounded-full w-min max-w-5xl top-4 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out`}
     >
       {/* logo */}
       <Link href="/#hero" className="font-black hidden sm:block">PO.RTALIS</Link>
