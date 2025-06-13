@@ -25,8 +25,8 @@ export const NAV_LINKS = [
     icon: RectangleGroupIcon,
   },
   {
-    href: "/#graduation",
-    label: "Graduation",
+    href: "/#education",
+    label: "Education",
     icon: AcademicCapIcon,
   },
   {

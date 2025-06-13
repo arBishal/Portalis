@@ -3,9 +3,8 @@ import FlipMotionEffect from "@/components/effects/flip-motion-effect";
 
 export default function Hero() {
   return (
-    <section id="hero" className="max-w-5xl h-screen p-6 flex flex-col items-center justify-start pt-22 sm:pt-24 text-3xl sm:text-4xl font-light">
-      <h1> Ping Xiao Po</h1>
-      <FlipMotionEffect />
+    <section id="hero" className="max-w-5xl h-screen p-6 flex flex-col gap-1 items-center justify-start pt-22 sm:pt-24">
+      <h1 className="text-4xl sm:text-5xl font-extrabold">Ping Xiao Po</h1>
       <h2>
         <span className="inline-block">
           <TypewriterEffect
