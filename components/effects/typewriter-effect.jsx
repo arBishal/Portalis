@@ -10,7 +10,7 @@ export default function TypewriterText({ texts = [] }) {
   );
 
   return (
-    <div className="text-2xl sm:text-3xl font-extrabold">
+    <div className="text-2xl sm:text-3xl font-extrabold text-center">
       <Typewriter
         options={{
           strings: styledTexts,
