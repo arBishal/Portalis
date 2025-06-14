@@ -2,13 +2,12 @@ import Link from "next/link";
 
 import TypewriterEffect from "@/components/effects/typewriter-effect";
 import FlipMotionEffect from "@/components/effects/flip-motion-effect";
-import BaseButton from "@/components/base/button";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="max-w-2xl h-screen p-6 flex flex-col gap-8 items-center justify-between pt-24 sm:pt-28 pb-12 sm:pb-14"
+      className="max-w-2xl h-screen p-6 flex flex-col gap-8 items-center justify-between pt-28 sm:pt-32 pb-12 sm:pb-16"
     >
       <div className="flex flex-col items-center justify-center gap-2">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-center">Ping Xiao Po</h1>
@@ -19,7 +18,7 @@ export default function Hero() {
             />
           </span>
         </h2>
-        <p className="text-justify text-base sm:text-xl font-sans mt-4 opacity-75">
+        <p className="text-justify text-base sm:text-xl font-sans mt-4">
           Trained by a red panda, blessed by an ancient tortoise, and
           reluctantly majestic on most Tuesdays. I have battled evil warlords,
           mastered chi, and reached inner peace—all while avoiding stairs like
@@ -30,7 +29,7 @@ export default function Hero() {
         <a
           href="/Awesome_Résumé_of_Po.pdf"
           target="-1"
-          className="mt-4 px-8 py-2 rounded transition-transform duration-300 text-base sm:text-lg text-center cursor-pointer bg-foreground text-background hover:scale-95 active:scale-95 w-fit sm:w-1/2"
+          className="mt-8 px-8 py-2 rounded transition-transform duration-300 text-base sm:text-lg text-center cursor-pointer bg-foreground text-background hover:scale-95 active:scale-95 w-fit sm:w-1/2"
         >
           Grab My Résumé
         </a>

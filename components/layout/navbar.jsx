@@ -44,14 +44,14 @@ export default function Navbar() {
           aria-label={label}
           title={label}
         >
-          <Icon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-teal-500 transition-transform hover:tansition-color duration-300 active:-rotate-45" />
+          <Icon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-teal-500 transition-transform duration-300 active:-rotate-45" />
         </Link>
       ))}
 
         {/* theme toggle */}
         <button
           onClick={toggleTheme}
-          className="transition-transform hover:tansition-color duration-500 active:-rotate-90 cursor-pointer"
+          className="transition-transform duration-500 active:-rotate-90 cursor-pointer"
           aria-label="Toggle Theme"
           title="Toggle Theme"
         >
