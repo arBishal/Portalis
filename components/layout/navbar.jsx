@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed font-mono flex items-center justify-center sm:justify-between gap-24 px-6 py-4 border border-border-transparent backdrop-blur-sm rounded-full w-min max-w-5xl top-4 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out`}
+      className={`fixed font-mono flex items-center justify-center sm:justify-between gap-24 px-6 py-4 border border-border-transparent backdrop-blur-lg rounded-full w-min max-w-5xl top-4 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out`}
     >
       {/* logo */}
       <Link href="/#hero" className="font-black hidden sm:block">PO.RTALIS</Link>
@@ -56,9 +56,9 @@ export default function Navbar() {
           title="Toggle Theme"
         >
           {isDark ? (
-            <SunIcon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-teal-500" />
+            <SunIcon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-amber-400" />
           ) : (
-            <MoonIcon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-teal-500" />
+            <MoonIcon className="w-5 h-5 sm:w-6 sm:h-6 hover:text-indigo-600" />
           )}
         </button>
       </div>
