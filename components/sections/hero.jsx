@@ -2,15 +2,20 @@ import Link from "next/link";
 
 import TypewriterEffect from "@/components/effects/typewriter-effect";
 import FlipMotionEffect from "@/components/effects/flip-motion-effect";
+import FirefliesCanvas from "@/components/effects/fireflies-canvas-effect";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="max-w-2xl h-screen p-6 flex flex-col gap-8 items-center justify-between pt-28 sm:pt-32 pb-12 sm:pb-16"
+      className="relative w-full h-screen p-6 flex flex-col gap-8 items-center justify-between pt-28 sm:pt-32 pb-12 sm:pb-16"
     >
-      <div className="flex flex-col items-center justify-center gap-2">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-center">Ping Xiao Po</h1>
+      <FirefliesCanvas />
+
+      <div className="max-w-2xl flex flex-col items-center justify-center gap-2">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-center">
+          Ping Xiao Po
+        </h1>
         <h2>
           <span className="inline-block">
             <TypewriterEffect
@@ -35,7 +40,10 @@ export default function Hero() {
         </a>
       </div>
 
-      <Link href="/#experiences" className="flex flex-col items-center animate-bounce cursor-pointer">
+      <Link
+        href="/#experiences"
+        className="flex flex-col items-center animate-bounce cursor-pointer"
+      >
         <span className="text-2xl">↓</span>
         <span className="text-base sm:text-xl">Unroll the Adventure</span>
       </Link>
