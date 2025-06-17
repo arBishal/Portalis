@@ -40,7 +40,21 @@ export default function FirefliesCanvas() {
      *   alpha: transparency (glow intensity)
      *   pulseDir: +1 or -1 (direction to pulse glow)
      */
-    const NUM_FIREFLIES = 32; // Change this to add/remove fireflies
+// 🔁 Determine firefly count based on screen size
+    const baseCount = 32;
+    const width = window.innerWidth;
+    let NUM_FIREFLIES;
+
+    if (width < 640) {
+      // Mobile
+      NUM_FIREFLIES = Math.floor(baseCount / 2); // 16
+    } else if (width < 1024) {
+      // Tablet
+      NUM_FIREFLIES = Math.floor(baseCount / 1.5); // ≈21
+    } else {
+      // Desktop
+      NUM_FIREFLIES = baseCount;
+    }
 
     const fireflies = Array.from({ length: NUM_FIREFLIES }).map(() => ({
       x: Math.random() * w,
