@@ -7,4 +7,3 @@ Personal portfolio website under construction.
 * JavaScript
 * Next.js v15
 * TailwindCSS v4
-* Framer Motion
