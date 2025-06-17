@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
+import { ThemeProvider } from "@/context/theme-context";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,16 +24,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
-      <body
-        suppressHydrationWarning
-        className={`antialiased relative`}
-      >
-        <Navbar />
-        <main className="flex flex-col items-center justify-center min-h-screen font-mono">
-          {children}
-        </main>
-        <Footer />
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
+    >
+      <body suppressHydrationWarning className={`antialiased relative`}>
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex flex-col items-center justify-center min-h-screen font-mono">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
