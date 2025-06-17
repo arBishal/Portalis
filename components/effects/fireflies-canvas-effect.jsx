@@ -45,7 +45,7 @@ export default function FirefliesCanvas() {
     const fireflies = Array.from({ length: NUM_FIREFLIES }).map(() => ({
       x: Math.random() * w,
       y: Math.random() * h,
-      r: Math.random() * 2 + 1, // radius: 1–3px
+      r: Math.random() * 3 + 1, // radius: 1–3px
       dx: Math.random() * 0.6 - 0.3, // horizontal speed: -0.3 to +0.3
       dy: -(Math.random() * 0.3 + 0.1), // upward float: -0.4 to -0.1
       alpha: Math.random() * 0.5 + 0.5, // initial glow brightness: 0.5–1
@@ -107,7 +107,7 @@ export default function FirefliesCanvas() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-none -z-10"
+      className="absolute inset-0 w-full h-full pointer-events-none -z-10 hidden dark:block"
     />
   );
 }

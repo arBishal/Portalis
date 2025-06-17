@@ -1,16 +1,20 @@
-import Link from "next/link";
+"use client";
 
+import Link from "next/link";
+import { useTheme } from "@/context/theme-context";
 import TypewriterEffect from "@/components/effects/typewriter-effect";
-import FlipMotionEffect from "@/components/effects/flip-motion-effect";
 import FirefliesCanvas from "@/components/effects/fireflies-canvas-effect";
+import WindLinesCanvas from "@/components/effects/wind-lines-canvas-effect";
 
 export default function Hero() {
+  const { isDark } = useTheme();
+
   return (
     <section
       id="hero"
       className="relative w-full h-screen p-6 flex flex-col gap-8 items-center justify-between pt-28 sm:pt-32 pb-12 sm:pb-16"
     >
-      <FirefliesCanvas />
+      {isDark ? <FirefliesCanvas /> : <WindLinesCanvas />}
 
       <div className="max-w-2xl flex flex-col items-center justify-center gap-2">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-center">
