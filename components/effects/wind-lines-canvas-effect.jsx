@@ -36,9 +36,9 @@ export default function WindLinesCanvas() {
         amplitude: Math.random() * 15 + 10, // wave height
         frequency: Math.random() * 0.01 + 0.003, // wave tightness
         phase: Math.random() * Math.PI * 2, // starting phase offset
-        speed: Math.random() * 0.005 + 0.003, // wave speed
+        speed: Math.random() * 0.003 + 0.001, // wave speed
         thickness: Math.random() * 1.2 + 0.8,
-        color: `hsla(180, 25%, 70%, ${Math.random() * 0.4 + 0.3})`, // soft teal/grayish-blue
+        color: `hsla(180, 25%, 90%, ${Math.random() * 0.4 + 0.3})`, // soft teal/grayish-blue
       };
     }
 
