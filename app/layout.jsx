@@ -1,10 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { ThemeProvider } from "next-themes";
+
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
-
-import { ThemeProvider } from "@/context/theme-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,11 +25,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
+      suppressHydrationWarning
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
     >
-      <body suppressHydrationWarning className={`antialiased relative`}>
-        <ThemeProvider>
+      <body className={`antialiased relative`}>
+        <ThemeProvider attribute="class"  defaultTheme="system" enableSystem>
           <Navbar />
           <main className="flex flex-col items-center justify-center min-h-screen font-mono">
             {children}
