@@ -1,14 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useTheme } from "@/context/theme-context";
+import { useTheme } from "next-themes";
+
 import TypewriterEffect from "@/components/effects/typewriter-effect";
 import FirefliesCanvas from "@/components/effects/fireflies-canvas-effect";
 import WindLinesCanvas from "@/components/effects/wind-lines-canvas-effect";
 import { SOCIAL_LINKS } from "@/constants/external-links";
 
 export default function Hero() {
-  const { isDark } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
 
   return (
     <section

@@ -121,7 +121,7 @@ export default function FirefliesCanvas() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-none -z-10 hidden dark:block"
+      className="absolute inset-0 w-full h-full pointer-events-none -z-10"
     />
   );
 }
