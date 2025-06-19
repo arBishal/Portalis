@@ -29,10 +29,10 @@
   --font-mono: var(--font-geist-mono);
   --color-border-transparent: color-mix(
     in srgb,
-    var(--foreground) 20%,
+    var(--foreground) 15%,
     transparent
   );
-  --color-card-bg: color-mix(in srgb, var(--foreground) 5%, transparent);
+  --color-card-transparent: color-mix(in srgb, var(--foreground) 3%, transparent);
 }
 
 body {
