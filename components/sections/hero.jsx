@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
+import Tooltip from "@/components/base/tooltip";
 import TypewriterEffect from "@/components/effects/typewriter-effect";
 import FirefliesCanvas from "@/components/effects/fireflies-canvas-effect";
 import WindLinesCanvas from "@/components/effects/wind-lines-canvas-effect";
@@ -66,12 +67,12 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="relative group"
               >
-                {/* Icon */}
-                <Icon className="w-5 sm:w-6 h-5 sm:h-6 hover:scale-110 transition-transform duration-150" />
-                {/* Tooltip */}
-                <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {link.name}
-                </span>
+                <Tooltip
+                  text={link.name}
+                  position="bottom"
+                >
+                  <Icon className="w-5 sm:w-6 h-5 sm:h-6 hover:scale-110 active:scale-110 transition-transform duration-150" />
+                </Tooltip>
               </a>
             );
           })}
