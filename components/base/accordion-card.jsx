@@ -39,7 +39,7 @@ export default function AccordionItem({ exp, index, isOpen, toggleItem }) {
           <p className="text-sm sm:text-base mb-4">{exp.description}</p>
 
           {/* Tech stack */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 font-mono">
             {exp.stack.map((tech, i) => (
               <span
                 key={i}
