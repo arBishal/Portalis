@@ -11,7 +11,7 @@ export default function AccordionItem({ exp, index, isOpen, toggleItem }) {
       {/* Card */}
       <div
         onClick={() => toggleItem(index)}
-        className="bg-card-transparent border border-border-transparent rounded-lg overflow-hidden cursor-pointer"
+        className="bg-card-transparent border border-border-transparent rounded-lg overflow-hidden cursor-pointer group"
       >
         {/* Header */}
         <div className="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none text-sm sm:text-base font-extralight">
@@ -22,7 +22,7 @@ export default function AccordionItem({ exp, index, isOpen, toggleItem }) {
             <p className="italic">{exp.period}</p>
           </div>
           <ChevronDownIcon
-            className={`w-5 h-5 transform transition-transform duration-300 ${
+            className={`w-5 h-5 transform transition-transform duration-300 group-hover:animate-bounce ${
               isOpen ? "rotate-180" : ""
             }`}
           />
