@@ -15,9 +15,9 @@ export default function Experiences() {
   };
 
   return (
-    <section id="experiences" className="max-w-2xl h-screen px-6 flex flex-col items-center justify-start gap-6 sm:gap-8 pt-22 sm:pt-24">
+    <section id="experiences" className="max-w-2xl h-fit px-6 flex flex-col items-center justify-start gap-6 sm:gap-8 pt-22 sm:pt-24">
       <h2 className="text-3xl sm:text-4xl font-bold">Experiences</h2>
-      <div className="relative border-l border-gray-700 ml-4">
+      <div className="relative border-l border-dashed ml-4 flex flex-col gap-8">
         {EXPERIENCES.map((exp, index) => (
           <AccordionCard
             key={index}
